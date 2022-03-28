@@ -1,5 +1,6 @@
-import React, { useState } from 'react'
+import React, { useState, useEffect } from 'react'
 import {v4 as uuidv4} from 'uuid'
+import axios from 'axios'
 import {BrowserRouter as Router, Route} from 'react-router-dom'
 
 import Header from './components/Header'
@@ -24,6 +25,10 @@ const App = () => {
       completed: true
     }
   ])
+
+  useEffect(() => {
+    const response = await.axios.get('')
+  }, []);
 
   const handleTaskClick = (TaskId) => {
     const newTasks = tasks.map(task => {
